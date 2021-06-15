@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/kolin-movies/static/css/main.5edee37c.chunk.css",
-    "main.js": "/kolin-movies/static/js/main.40460cad.chunk.js",
-    "main.js.map": "/kolin-movies/static/js/main.40460cad.chunk.js.map",
-    "runtime-main.js": "/kolin-movies/static/js/runtime-main.20490d8e.js",
-    "runtime-main.js.map": "/kolin-movies/static/js/runtime-main.20490d8e.js.map",
-    "static/js/2.26be79c9.chunk.js": "/kolin-movies/static/js/2.26be79c9.chunk.js",
-    "static/js/2.26be79c9.chunk.js.map": "/kolin-movies/static/js/2.26be79c9.chunk.js.map",
-    "index.html": "/kolin-movies/index.html",
-    "static/css/main.5edee37c.chunk.css.map": "/kolin-movies/static/css/main.5edee37c.chunk.css.map",
-    "static/js/2.26be79c9.chunk.js.LICENSE.txt": "/kolin-movies/static/js/2.26be79c9.chunk.js.LICENSE.txt"
+    "main.css": "/react-movies/static/css/main.5edee37c.chunk.css",
+    "main.js": "/react-movies/static/js/main.40460cad.chunk.js",
+    "main.js.map": "/react-movies/static/js/main.40460cad.chunk.js.map",
+    "runtime-main.js": "/react-movies/static/js/runtime-main.708c67ab.js",
+    "runtime-main.js.map": "/react-movies/static/js/runtime-main.708c67ab.js.map",
+    "static/js/2.26be79c9.chunk.js": "/react-movies/static/js/2.26be79c9.chunk.js",
+    "static/js/2.26be79c9.chunk.js.map": "/react-movies/static/js/2.26be79c9.chunk.js.map",
+    "index.html": "/react-movies/index.html",
+    "static/css/main.5edee37c.chunk.css.map": "/react-movies/static/css/main.5edee37c.chunk.css.map",
+    "static/js/2.26be79c9.chunk.js.LICENSE.txt": "/react-movies/static/js/2.26be79c9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.20490d8e.js",
+    "static/js/runtime-main.708c67ab.js",
     "static/js/2.26be79c9.chunk.js",
     "static/css/main.5edee37c.chunk.css",
     "static/js/main.40460cad.chunk.js"
