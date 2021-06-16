@@ -7,7 +7,7 @@ function Header() {
         <div className="brand-logo">Movies</div>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <a href="#!">Repo</a>
+            <a href="https://github.com/kolan4ik/react-movies">Repo</a>
           </li>
         </ul>
       </div>

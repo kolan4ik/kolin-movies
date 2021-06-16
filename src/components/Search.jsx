@@ -1,96 +1,53 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-class Search extends Component {
-  state = {
-    search: "",
-    type: "",
-  };
+function Search({ searchMovies }) {
+  const [search, setSearch] = useState("");
+  const [type, setType] = useState("");
 
-  handleKey = (e) => {
-    debugger;
+  const handleKey = (e) => {
     if (e.key === "Enter") {
-      this.props.search(this.state);
+      searchMovies({ search, type });
     }
   };
 
-  handlerFilter = (e) => {
-    this.setState(
-      () => ({ type: e.target.value }),
-      () => this.props.search(this.state)
-    );
+  const handlerFilter = (e) => {
+    setType(e.target.value);
+    searchMovies({ search, type: e.target.value });
   };
-  render() {
-    const { type } = this.state;
-    return (
-      <div className="row">
-        <div className="col s12">
-          <div className="row">
-            <div
-              style={{ position: "relative" }}
-              cla="input-field inline col s12 row"
-            >
-              <button
-                style={{ position: "absolute", right: 0 }}
-                onClick={(e) => this.props.search(this.state)}
-                className="btn waves-effect waves-light"
-              >
-                Search
-              </button>
-              <input
-                placeholder="Search"
-                type="search"
-                className="validate "
-                value={this.state.search}
-                onChange={(e) => this.setState({ search: e.target.value })}
-                onKeyDown={this.handleKey}
-              />
-            </div>
+  return (
+    <div className="row">
+      <div className="col s12">
+        <div className="row">
+          <div style={{ position: "relative" }} cla="input-field inline col s12 row">
+            <button style={{ position: "absolute", right: 0 }} onClick={() => searchMovies({ search, type })} className="btn waves-effect waves-light">
+              Search
+            </button>
+            <input placeholder="Search" type="search" className="validate " value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={handleKey} />
           </div>
-          <div className="row">
-            <div className="col c4">
-              <label>
-                <input
-                  className="with-gap"
-                  name="type"
-                  type="radio"
-                  onChange={this.handlerFilter}
-                  checked={type === ""}
-                  value=""
-                />
-                <span>all</span>
-              </label>
-            </div>
-            <div className="col c4">
-              <label>
-                <input
-                  className="with-gap"
-                  name="type"
-                  type="radio"
-                  onChange={this.handlerFilter}
-                  checked={type === "movie"}
-                  value="movie"
-                />
-                <span>movies</span>
-              </label>
-            </div>
-            <div className="col c4">
-              <label>
-                <input
-                  className="with-gap"
-                  name="type"
-                  type="radio"
-                  onChange={this.handlerFilter}
-                  checked={type === "series"}
-                  value="series"
-                />
-                <span>series</span>
-              </label>
-            </div>
+        </div>
+        <div className="row">
+          <div className="col c4">
+            <label>
+              <input className="with-gap" name="type" type="radio" onChange={handlerFilter} checked={type === ""} value="" />
+              <span>all</span>
+            </label>
+          </div>
+          <div className="col c4">
+            <label>
+              <input className="with-gap" name="type" type="radio" onChange={handlerFilter} checked={type === "movie"} value="movie" />
+              <span>movies</span>
+            </label>
+          </div>
+          <div className="col c4">
+            <label>
+              <input className="with-gap" name="type" type="radio" onChange={handlerFilter} checked={type === "series"} value="series" />
+              <span>series</span>
+            </label>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export { Search };
